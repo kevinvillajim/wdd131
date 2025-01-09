@@ -1,0 +1,118 @@
+body {
+	font-family: "Abel", sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	background-color: #f5f5f5;
+}
+
+.header {
+	background: #494949;
+	color: #fff;
+	padding: 20px 0 0 0;
+	text-align: center;
+}
+
+.nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0;
+	padding: 0;
+	background: #313131;
+}
+
+.nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.nav ul li a:hover {
+	color: #b8b8b8;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 20px 75px;
+}
+
+.card {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	width: 60%;
+	text-align: center;
+}
+
+.me {
+	display: flex;
+	gap: 30px;
+}
+
+.location-info {
+	display: flex;
+	gap: 30px;
+}
+
+.card2 {
+	padding-top: 20px;
+}
+
+.card img {
+	border-radius: 50%;
+}
+
+.resources {
+	flex: 1;
+	background: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resources > h2 {
+	text-align: center;
+}
+
+.resources > div {
+	height: 90%;
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+}
+
+.resources div ul li a {
+	color: #797979;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.resources div ul li a:hover {
+	color: #333;
+}
+
+.footer {
+	background: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.footer span {
+	font-weight: bold;
+}
+
+@media (max-width: 768px) {
+	.main {
+		flex-direction: column;
+	}
+
+	.card {
+		width: 100%;
+	}
+}
