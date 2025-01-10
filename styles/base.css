@@ -87,13 +87,13 @@ body {
 }
 
 .resources div ul li a {
-	color: #797979;
+	color: #2b2b2b;
 	font-weight: bold;
 	font-size: 18px;
 }
 
 .resources div ul li a:hover {
-	color: #333;
+	color: #050505;
 }
 
 .footer {
