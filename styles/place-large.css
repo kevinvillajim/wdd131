@@ -1,62 +1,63 @@
 :root {
-  --color-primary: #e5333b;
-  --color-secondary: #062241;
-  --color-tertiary: #436bd2;
-  --color-background: #f9f9f9;
-  --color-text-black: #333333;
-  --color-text-white: #ffffff;
-  --card-padding: 1.5rem;
-  --border-radius: 0.5rem;
+	--color-primary: #e5333b;
+	--color-secondary: #062241;
+	--color-tertiary: #436bd2;
+	--color-background: #f9f9f9;
+	--color-text-black: #333333;
+	--color-text-white: #ffffff;
+	--card-padding: 1.5rem;
+	--border-radius: 0.5rem;
 }
 
 @media (min-width: 768px) {
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    background-size: cover;
-  }
+	.content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		position: relative;
+		background-size: cover;
+	}
 
-  .content-img-container {
-    border-bottom: none;
-  }
+	.content-img-container {
+		border-bottom: none;
+		height: calc(100vh - 209px);
+	}
 
-  .data-card,
-  .weather-card {
-    background-color: var(--color-background);
-    opacity: 0.85;
-    border-radius: var(--border-radius);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: var(--card-padding);
-    width: 20%;
-    position: absolute;
-  }
+	.data-card,
+	.weather-card {
+		background-color: var(--color-background);
+		opacity: 0.85;
+		border-radius: var(--border-radius);
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+		padding: var(--card-padding);
+		width: 20%;
+		position: absolute;
+	}
 
-  .data-card {
-    top: 20px;
-    left: 20px;
-  }
+	.data-card {
+		top: 20px;
+		left: 20px;
+	}
 
-  .weather-card {
-    bottom: 20px;
-    right: 20px;
-  }
+	.weather-card {
+		bottom: 20px;
+		right: 20px;
+	}
 
-  .data-card h3,
-  .weather-card h3 {
-    background-color: var(--color-tertiary);
-    color: var(--color-text-white);
-    padding: 1rem;
-    text-align: left;
-    position: relative;
-    width: 120%;
-    left: -40px;
-  }
-  .weather-card img {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 25px;
-  }
+	.data-card h3,
+	.weather-card h3 {
+		background-color: var(--color-tertiary);
+		color: var(--color-text-white);
+		padding: 1rem;
+		text-align: left;
+		position: relative;
+		width: 120%;
+		left: -40px;
+	}
+	.weather-card img {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 25px;
+	}
 }
