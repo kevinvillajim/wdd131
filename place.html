@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals - Kevin Alexander Villacreses Jiménez - A place description website of Quito Ecuador">
+    <meta name="author" content="Kevin Villacreses">
+    <title>WDD 131: Quito -Ecuador Place Asignment</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link type="image/x-icon" href="images/quitoIcon.svg" rel="icon">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header-title">Quito</h1>
+    </header>
+    <div class="content">
+        <div class="content-img-container">
+            <img src="https://images.pexels.com/photos/8253082/pexels-photo-8253082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Landscape of Quito" class="content-img">
+        </div>
+        <div class="data-card">
+            <h3>Data</h3>
+            <ul class="data-details">
+                <li>Area: <span id="area">372.4 km²</span></li>
+                <li>Population: <span id="population">2,889,703</span></li>
+                <li>Country: <span id="country">Ecuador</span></li>
+                <li>Language: <span id="language">Spanish</span></li>
+                <li>Currency: <span id="currency">USD</span></li>
+                <li>Timezone: <span id="timezone">UTC -5</span></li>
+                <li>Calling Code: <span id="calling-code">+593</span></li>
+                <li>Internet TLD: <span id="domain">.ec</span></li>
+            </ul>
+        </div>
+
+        <div class="weather-card">
+            <h3>Weather</h3>
+            <img src="/images/weather-icon.webp" alt="Weather Icon" class="weather-icon">
+            <ul class="weather-details">
+                <li>Temperature: <span id="temperature"></span></li>
+                <li>Conditions: <span id="conditions">Partly Cloudy</span></li>
+                <li>Wind: <span id="wind"></span></li>
+                <li>Wind Chill: <span id="wind-chill"></span></li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; <span id="currentyear"></span> Kevin Alexander Villacreses Jiménez</p>
+        <p>Quito - Ecuador</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
