@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function loadTemples() {
     try {
-      const response = await fetch("./data/temples.json");
+      const response = await fetch(
+        "https://kevinvillajim.github.io/wdd131/data/temples.json"
+      );
       if (!response.ok) {
         throw new Error(`Error ${response.status}`);
       }
