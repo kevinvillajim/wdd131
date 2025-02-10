@@ -1,0 +1,36 @@
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 0.2rem;
+  font-size: smaller;
+}
+
+th,
+td {
+  padding: 0.5em 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  white-space: pre;
+}
+
+thead th,
+tbody td {
+  text-align: center;
+}
+
+thead {
+  background-color: black;
+  color: white;
+}
+
+th {
+  padding: 0.3rem;
+  font-size: larger;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eee;
+}
