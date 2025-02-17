@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product Detail - TechBuy</title>
+		<link rel="stylesheet" href="styles/index.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Font Awesome for icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="styles/product.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="logo">
+					<a href="index.html">TechBuy</a>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="categories.html">Categories</a></li>
+						<li><a href="product.html" class="active">Product Details</a></li>
+					</ul>
+				</nav>
+				<div class="header-icons">
+					<a href="#"><i class="fas fa-search"></i></a>
+					<a href="#"
+						><i class="fas fa-shopping-cart"></i
+						><span class="cart-count">0</span></a
+					>
+					<a href="#"><i class="fas fa-user"></i></a>
+					<button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- Breadcrumb -->
+			<div class="breadcrumb">
+				<div class="container">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="categories.html">Categories</a></li>
+						<li>
+							<a href="categories.html" id="product-category-link">Category</a>
+						</li>
+						<li><span id="product-name-breadcrumb">Product Name</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Product Detail Section -->
+			<section class="product-detail-section">
+				<div class="container">
+					<div class="product-detail-grid">
+						<!-- Product Images -->
+						<div class="product-images">
+							<div class="main-image">
+								<img id="main-product-image" src="" alt="Product Image" />
+								<div class="product-badges">
+									<span id="discount-badge" class="discount-badge"></span>
+									<span id="status-badge" class="status-badge"></span>
+								</div>
+							</div>
+							<div class="thumbnail-images" id="thumbnail-container">
+								<!-- Render JS -->
+							</div>
+						</div>
+
+						<!-- Product Info -->
+						<div class="product-info">
+							<h1 id="product-name">Product Name</h1>
+
+							<div class="product-meta">
+								<div class="product-rating">
+									<div id="rating-stars" class="stars"></div>
+									<span id="rating-count">(0 reviews)</span>
+								</div>
+								<div class="product-sku">
+									SKU: <span id="product-sku"></span>
+								</div>
+								<div class="product-availability">
+									<i class="fas fa-check-circle"></i>
+									<span id="product-availability">In Stock</span>
+								</div>
+							</div>
+
+							<div class="product-price-container">
+								<div id="original-price-container" class="original-price"></div>
+								<div id="current-price" class="current-price"></div>
+							</div>
+
+							<div
+								class="product-short-description"
+								id="product-short-description"
+							>
+								<!-- Short description will be populated by JS -->
+							</div>
+
+							<div class="product-variations">
+								<!-- Color Selection -->
+								<div class="variation-group" id="color-selection-container">
+									<label>Color:</label>
+									<div class="color-options" id="color-options">
+										<!-- Colors will be populated by JS -->
+									</div>
+								</div>
+
+								<!-- Storage Selection (if applicable) -->
+								<div class="variation-group" id="storage-selection-container">
+									<label>Storage:</label>
+									<div class="option-buttons" id="storage-options">
+										<!-- Storage options will be populated by JS -->
+									</div>
+								</div>
+							</div>
+
+							<div class="product-actions">
+								<div class="quantity-selector">
+									<button id="decrease-quantity" class="quantity-btn">-</button>
+									<input
+										type="number"
+										id="quantity"
+										value="1"
+										min="1"
+										max="10"
+									/>
+									<button id="increase-quantity" class="quantity-btn">+</button>
+								</div>
+
+								<button id="add-to-cart-btn" class="btn primary-btn">
+									<i class="fas fa-shopping-cart"></i> Add to Cart
+								</button>
+
+								<button id="add-to-wishlist-btn" class="btn secondary-btn">
+									<i class="far fa-heart"></i>
+								</button>
+							</div>
+
+							<div class="product-delivery">
+								<div class="delivery-option">
+									<i class="fas fa-truck"></i>
+									<div>
+										<h4>Free Shipping</h4>
+										<p>Free shipping on orders over $50</p>
+									</div>
+								</div>
+								<div class="delivery-option">
+									<i class="fas fa-undo"></i>
+									<div>
+										<h4>Easy Returns</h4>
+										<p>30 days return policy</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="social-share">
+								<p>Share:</p>
+								<a href="#" class="social-icon"
+									><i class="fab fa-facebook-f"></i
+								></a>
+								<a href="#" class="social-icon"
+									><i class="fab fa-twitter"></i
+								></a>
+								<a href="#" class="social-icon"
+									><i class="fab fa-pinterest-p"></i
+								></a>
+								<a href="#" class="social-icon"
+									><i class="fab fa-linkedin-in"></i
+								></a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Product Tabs -->
+					<div class="product-tabs">
+						<div class="tabs-header">
+							<button class="tab-btn active" data-tab="description">
+								Description
+							</button>
+							<button class="tab-btn" data-tab="specifications">
+								Specifications
+							</button>
+							<button class="tab-btn" data-tab="reviews">
+								Reviews <span id="review-count">(0)</span>
+							</button>
+						</div>
+
+						<div class="tabs-content">
+							<div id="description-tab" class="tab-content active">
+								<!-- Description content will be populated by JS -->
+							</div>
+
+							<div id="specifications-tab" class="tab-content">
+								<table class="specs-table" id="specs-table">
+									<!-- Specifications will be populated by JS -->
+								</table>
+							</div>
+
+							<div id="reviews-tab" class="tab-content">
+								<div id="reviews-container">
+									<!-- Reviews will be populated by JS -->
+								</div>
+
+								<div class="review-form-container">
+									<h3>Write a Review</h3>
+									<form id="review-form" method="post">
+										<div class="form-group">
+											<label for="review-name">Your Name</label>
+											<input type="text" id="review-name" required />
+										</div>
+
+										<div class="form-group">
+											<label for="review-email">Your Email</label>
+											<input type="email" id="review-email" required />
+										</div>
+
+										<div class="form-group">
+											<label>Your Rating</label>
+											<div class="rating-input">
+												<i class="far fa-star" data-rating="1"></i>
+												<i class="far fa-star" data-rating="2"></i>
+												<i class="far fa-star" data-rating="3"></i>
+												<i class="far fa-star" data-rating="4"></i>
+												<i class="far fa-star" data-rating="5"></i>
+											</div>
+											<input
+												type="hidden"
+												id="review-rating"
+												value="0"
+												required
+											/>
+										</div>
+
+										<div class="form-group">
+											<label for="review-title">Review Title</label>
+											<input type="text" id="review-title" required />
+										</div>
+
+										<div class="form-group">
+											<label for="review-content">Your Review</label>
+											<textarea
+												id="review-content"
+												rows="5"
+												required
+											></textarea>
+										</div>
+
+										<button type="submit" class="btn primary-btn">
+											Submit Review
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Related Products Section -->
+			<section class="related-products-section">
+				<div class="container">
+					<h2 class="section-title">Related Products</h2>
+
+					<div class="related-products-grid" id="related-products-container">
+						<!-- Related products will be populated by JS -->
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container">
+				<div class="footer-columns">
+					<div class="footer-column">
+						<h3>TechBuy</h3>
+						<p>
+							Your premium destination for the latest technology and gadgets.
+						</p>
+						<div class="social-icons">
+							<a href="#"><i class="fab fa-facebook"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+					<div class="footer-column">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="categories.html">Categories</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="references.html">References</a></li>
+						</ul>
+					</div>
+					<div class="footer-column">
+						<h3>Customer Service</h3>
+						<ul>
+							<li><a href="#">Track Order</a></li>
+							<li><a href="#">Returns [&] Refunds</a></li>
+							<li><a href="#">Shipping Info</a></li>
+							<li><a href="#">FAQs</a></li>
+						</ul>
+					</div>
+					<div class="footer-column">
+						<h3>Contact Info</h3>
+						<address>
+							<p>
+								<i class="fas fa-map-marker-alt"></i> Diego Garcia, Quito,
+								Ecuador
+							</p>
+							<p><i class="fas fa-phone"></i> +593 96 3368 896</p>
+							<p><i class="fas fa-envelope"></i> support@techbuy.com</p>
+						</address>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2025 TechBuy. All rights reserved.</p>
+					<div class="payment-icons">
+						<i class="fab fa-cc-visa"></i>
+						<i class="fab fa-cc-mastercard"></i>
+						<i class="fab fa-cc-amex"></i>
+						<i class="fab fa-cc-paypal"></i>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="scripts/index.js"></script>
+		<script src="scripts/product.js"></script>
+	</body>
+</html>

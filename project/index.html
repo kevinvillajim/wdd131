@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TechBuy - Your Premium Tech Store</title>
+		<link rel="stylesheet" href="styles/index.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Font Awesome for icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="logo">
+					<a href="index.html">TechBuy</a>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="categories.html">Categories</a></li>
+						<li><a href="product.html">Product Details</a></li>
+					</ul>
+				</nav>
+				<div class="header-icons">
+					<a href="#"><i class="fas fa-search"></i></a>
+					<a href="#"
+						><i class="fas fa-shopping-cart"></i
+						><span class="cart-count">0</span></a
+					>
+					<a href="#"><i class="fas fa-user"></i></a>
+					<button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- Hero Section -->
+			<section class="hero">
+				<div class="container">
+					<div class="hero-content">
+						<h1>Next Generation Technology</h1>
+						<p>
+							Discover the latest innovations in tech with premium quality and
+							unbeatable prices.
+						</p>
+						<a href="categories.html" class="btn primary-btn">Shop Now</a>
+					</div>
+					<div class="hero-image">
+						<img
+							src="images/hero-tech.jpg"
+							alt="Latest technology products showcase"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<!-- Value Proposition Section -->
+			<section class="value-proposition">
+				<div class="container">
+					<h2>Why Choose TechBuy?</h2>
+					<div class="cards-container">
+						<div class="card">
+							<div class="card-icon">
+								<i class="fas fa-truck-fast"></i>
+							</div>
+							<h3>Fast Delivery</h3>
+							<p>
+								Get your tech delivered within 24 hours in major cities and 3
+								days nationwide.
+							</p>
+						</div>
+						<div class="card">
+							<div class="card-icon">
+								<i class="fas fa-shield-alt"></i>
+							</div>
+							<h3>Quality Guarantee</h3>
+							<p>
+								All products come with a 2-year warranty and 30-day money-back
+								guarantee.
+							</p>
+						</div>
+						<div class="card">
+							<div class="card-icon">
+								<i class="fas fa-headset"></i>
+							</div>
+							<h3>24/7 Support</h3>
+							<p>
+								Our expert team is available around the clock to assist with
+								your tech needs.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Best Sellers Section -->
+			<section class="best-sellers">
+				<div class="container">
+					<div class="section-header">
+						<h2>Best Sellers</h2>
+						<a href="categories.html" class="view-all"
+							>View All <i class="fas fa-arrow-right"></i
+						></a>
+					</div>
+					<div class="products-grid" id="bestsellers-container">
+						<!-- Products will be loaded here with JavaScript -->
+					</div>
+				</div>
+			</section>
+
+			<!-- Categories Quick Access -->
+			<section class="categories-showcase">
+				<div class="container">
+					<h2>Shop By Category</h2>
+					<div class="categories-grid">
+						<a href="categories.html?category=laptops" class="category-card">
+							<img
+								src="images/category-laptop.jpg"
+								alt="Laptops"
+								loading="lazy"
+							/>
+							<h3>Laptops</h3>
+						</a>
+						<a
+							href="categories.html?category=smartphones"
+							class="category-card"
+						>
+							<img
+								src="images/category-smartphone.jpg"
+								alt="Smartphones"
+								loading="lazy"
+							/>
+							<h3>Smartphones</h3>
+						</a>
+						<a
+							href="categories.html?category=accessories"
+							class="category-card"
+						>
+							<img
+								src="images/category-accessories.jpg"
+								alt="Accessories"
+								loading="lazy"
+							/>
+							<h3>Accessories</h3>
+						</a>
+						<a href="categories.html?category=wearables" class="category-card">
+							<img
+								src="images/category-wearables.jpg"
+								alt="Wearables"
+								loading="lazy"
+							/>
+							<h3>Wearables</h3>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Newsletter Section -->
+			<section class="newsletter">
+				<div class="container">
+					<div class="newsletter-content">
+						<h2>Stay Updated</h2>
+						<p>
+							Subscribe to our newsletter for exclusive deals and tech news.
+						</p>
+						<form id="newsletter-form">
+							<input type="email" placeholder="Enter your email" required />
+							<button type="submit" class="btn primary-btn">Subscribe</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container">
+				<div class="footer-columns">
+					<div class="footer-column">
+						<h3>TechBuy</h3>
+						<p>
+							Your premium destination for the latest technology and gadgets.
+						</p>
+						<div class="social-icons">
+							<a href="#"><i class="fab fa-facebook"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+					<div class="footer-column">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="categories.html">Categories</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="references.html">References</a></li>
+						</ul>
+					</div>
+					<div class="footer-column">
+						<h3>Customer Service</h3>
+						<ul>
+							<li><a href="#">Track Order</a></li>
+							<li><a href="#">Returns [&] Refunds</a></li>
+							<li><a href="#">Shipping Info</a></li>
+							<li><a href="#">FAQs</a></li>
+						</ul>
+					</div>
+					<div class="footer-column">
+						<h3>Contact Info</h3>
+						<address>
+							<p>
+								<i class="fas fa-map-marker-alt"></i> Diego Garcia, Quito,
+								Ecuador
+							</p>
+							<p><i class="fas fa-phone"></i> +593 96 3368 896</p>
+							<p><i class="fas fa-envelope"></i> support@techbuy.com</p>
+						</address>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2025 TechBuy. All rights reserved.</p>
+					<div class="payment-icons">
+						<i class="fab fa-cc-visa"></i>
+						<i class="fab fa-cc-mastercard"></i>
+						<i class="fab fa-cc-amex"></i>
+						<i class="fab fa-cc-paypal"></i>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="scripts/index.js"></script>
+	</body>
+</html>

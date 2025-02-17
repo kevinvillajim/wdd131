@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Categories - TechBuy</title>
+		<link rel="stylesheet" href="styles/index.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Font Awesome for icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="styles/categories.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="logo">
+					<a href="index.html">TechBuy</a>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="categories.html" class="active">Categories</a></li>
+						<li><a href="product.html">Product Details</a></li>
+					</ul>
+				</nav>
+				<div class="header-icons">
+					<a href="#"><i class="fas fa-search"></i></a>
+					<a href="#"
+						><i class="fas fa-shopping-cart"></i
+						><span class="cart-count">0</span></a
+					>
+					<a href="#"><i class="fas fa-user"></i></a>
+					<button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- Category Hero Banner -->
+			<section class="category-hero">
+				<div class="container">
+					<h1 id="category-title">All Categories</h1>
+					<p id="category-description">
+						Explore our wide range of high-quality tech products
+					</p>
+				</div>
+			</section>
+
+			<!-- Filters and Products Section -->
+			<section class="products-section">
+				<div class="container">
+					<div class="filter-section">
+						<div class="filter-header">
+							<h2>Filters</h2>
+							<button id="clear-filters" class="text-btn">Clear All</button>
+						</div>
+
+						<!-- Category Filter -->
+						<div class="filter-group">
+							<h3 class="filter-title">Categories</h3>
+							<ul class="filter-list" id="category-filter">
+								<li>
+									<label>
+										<input type="checkbox" value="laptops" /> Laptops
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="smartphones" /> Smartphones
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="accessories" /> Accessories
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="wearables" /> Wearables
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="gaming" /> Gaming
+									</label>
+								</li>
+								<li>
+									<label> <input type="checkbox" value="audio" /> Audio </label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="cameras" /> Cameras
+									</label>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Price Range Filter -->
+						<div class="filter-group">
+							<h3 class="filter-title">Price Range</h3>
+							<div class="price-slider">
+								<div class="price-inputs">
+									<div>
+										<label for="min-price">Min $</label>
+										<input type="number" id="min-price" min="0" value="0" />
+									</div>
+									<div>
+										<label for="max-price">Max $</label>
+										<input type="number" id="max-price" min="0" value="2000" />
+									</div>
+								</div>
+								<button id="apply-price" class="btn secondary-btn">
+									Apply
+								</button>
+							</div>
+						</div>
+
+						<!-- Rating Filter -->
+						<div class="filter-group">
+							<h3 class="filter-title">Rating</h3>
+							<ul class="filter-list" id="rating-filter">
+								<li>
+									<label>
+										<input type="checkbox" value="4" /> 4★ [&] above
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="3" /> 3★ [&] above
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="2" /> 2★ [&] above
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="1" /> 1★ [&] above
+									</label>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Discount Filter -->
+						<div class="filter-group">
+							<h3 class="filter-title">Discounts</h3>
+							<ul class="filter-list" id="discount-filter">
+								<li>
+									<label>
+										<input type="checkbox" value="10" /> 10% or more
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="20" /> 20% or more
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="30" /> 30% or more
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox" value="40" /> 40% or more
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="products-container">
+						<div class="products-header">
+							<div class="products-count" id="products-count">
+								Showing 0 products
+							</div>
+							<div class="sort-filter">
+								<label for="sort-select">Sort by:</label>
+								<select id="sort-select">
+									<option value="newest">Newest</option>
+									<option value="price-low">Price: Low to High</option>
+									<option value="price-high">Price: High to Low</option>
+									<option value="rating">Rating</option>
+									<option value="popularity">Popularity</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="products-grid" id="products-grid">
+							<!-- Products will be loaded dynamically with JavaScript -->
+						</div>
+
+						<div class="pagination" id="pagination">
+							<!-- Pagination will be generated dynamically -->
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container">
+				<div class="footer-columns">
+					<div class="footer-column">
+						<h3>TechBuy</h3>
+						<p>
+							Your premium destination for the latest technology and gadgets.
+						</p>
+						<div class="social-icons">
+							<a href="#"><i class="fab fa-facebook"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+					<div class="footer-column">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="categories.html">Categories</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="references.html">References</a></li>
+						</ul>
+					</div>
+					<div class="footer-column">
+						<h3>Customer Service</h3>
+						<ul>
+							<li><a href="#">Track Order</a></li>
+							<li><a href="#">Returns & Refunds</a></li>
+							<li><a href="#">Shipping Info</a></li>
+							<li><a href="#">FAQs</a></li>
+						</ul>
+					</div>
+					<div class="footer-column">
+						<h3>Contact Info</h3>
+						<address>
+							<p>
+								<i class="fas fa-map-marker-alt"></i> Diego Garcia, Quito,
+								Ecuador
+							</p>
+							<p><i class="fas fa-phone"></i> +593 96 3368 896</p>
+							<p><i class="fas fa-envelope"></i> support@techbuy.com</p>
+						</address>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2025 TechBuy. All rights reserved.</p>
+					<div class="payment-icons">
+						<i class="fab fa-cc-visa"></i>
+						<i class="fab fa-cc-mastercard"></i>
+						<i class="fab fa-cc-amex"></i>
+						<i class="fab fa-cc-paypal"></i>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="scripts/index.js"></script>
+		<script src="scripts/categories.js"></script>
+	</body>
+</html>
